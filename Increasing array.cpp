@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+#define ll long long
+#define all(v) ((v).begin()), ((v).end())
+#define foi(n) for (long long i=0; i<n; ++i)
+#define foj(n) for (long long j=0; j<n; ++j)
+#define rev(a) reverse(a.begin(), a.end());
+#define sz(x) x.size()
+#define v(s) vector<int> s
+ 
+int convert( string s) {
+   int x;
+   x = stoi( s );
+   return x;
+}
+ 
+
+void solve(){
+   ll n; cin>>n; ll arr[n], mov=0;
+   foi(n){
+       cin>>arr[i];
+   }foi(n-1){
+       if(arr[i+1]<arr[i]){
+           mov+=(arr[i]-arr[i+1]);
+           arr[i+1]+=(arr[i]-arr[i+1]);
+       }
+   }cout<<mov<<endl;
+   
+}
+
+ 
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(NULL);
+    //ll t; cin>>t;
+    ll t=1;
+    while(t--){
+        solve();
+    }
+    #ifndef ONLINE_JUDGE
+        freopen("input.in","r",stdin);
+    #endif
+    
+ 
+ 
+}
